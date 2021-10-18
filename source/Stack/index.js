@@ -8,13 +8,13 @@ class Stack {
    */
   constructor(list) {
     if (list && typeof list === 'object') {
-      this.items = list;
+      this.items = list
       if (Object.prototype.toString.call(list) === '[object Object]') {
-        this.count = Object.keys(list).length;
+        this.count = Object.keys(list).length
       }
     } else {
-      this.items = {};
-      this.count = 0;
+      this.items = {}
+      this.count = 0
     }
   }
 
@@ -24,11 +24,11 @@ class Stack {
    */
   push(...elements) {
     if (Array.isArray(this.items)) {
-      this.items.push(...elements);
+      this.items.push(...elements)
     } else {
       for (const element of elements) {
-        this.items[this.count] = element;
-        this.count++;
+        this.items[this.count] = element
+        this.count++
       }
     }
   }
@@ -39,10 +39,10 @@ class Stack {
   pop() {
     if (!this.isEmpty()) {
       if (Array.isArray(this.items)) {
-        this.items.pop();
+        this.items.pop()
       } else {
-        this.count--;
-        delete this.items[this.count];
+        this.count--
+        delete this.items[this.count]
       }
     }
   }
@@ -52,33 +52,38 @@ class Stack {
    * @returns
    */
   peek() {
-    if (Array.isArray(this.items)) {
-      return this.items[this.items.length - 1];
+    if (this.isEmpty()) {
+      return undefined
     }
-    return this.items[count - 1];
+
+    if (Array.isArray(this.items)) {
+      return this.items[this.items.length - 1]
+    }
+
+    return this.items[count - 1]
   }
 
   isEmpty() {
     if (Array.isArray(this.items)) {
-      return this.items.length === 0;
+      return this.items.length === 0
     }
-    return this.count === 0;
+    return this.count === 0
   }
 
   clear() {
     if (Array.isArray(this.items)) {
-      this.items = [];
+      this.items = []
     } else {
-      this.items = {};
-      this.count = 0;
+      this.items = {}
+      this.count = 0
     }
   }
 
   size() {
     if (Array.isArray(this.items)) {
-      return this.items.length;
+      return this.items.length
     }
-    return this.count;
+    return this.count
   }
 
   /**
@@ -87,15 +92,15 @@ class Stack {
    */
   toString() {
     if (this.isEmpty()) {
-      return '';
+      return ''
     }
     if (Array.isArray(this.items)) {
-      return this.items.toString();
+      return this.items.toString()
     }
-    return Object.values(this.items).toString();
+    return Object.values(this.items).toString()
   }
 }
 
-const stack = new Stack();
+const stack = new Stack()
 
-export default stack;
+export default stack

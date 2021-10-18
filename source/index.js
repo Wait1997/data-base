@@ -1,9 +1,13 @@
-import stack from './Stack';
+import deque from './Queue/Deque'
 
-stack.push(1, 2, 3, 4, 5);
-stack.pop();
+deque.addFront(1)
+// deque.addFront(2)
+// deque.addFront(3)
+// deque.addFront(4)
 
-console.log(stack.isEmpty());
-console.log(stack.items);
-console.log(stack.count);
-console.log(stack.toString());
+// deque.removeBack()
+// deque.removeFront()
+
+console.log(deque.items)
+
+console.log(deque.size())
