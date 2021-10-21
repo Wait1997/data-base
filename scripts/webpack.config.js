@@ -15,6 +15,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.ts', '.json']
   },
+  devtool: 'source-map',
   mode: isDev ? 'development' : 'production',
   devServer: {
     compress: true,
