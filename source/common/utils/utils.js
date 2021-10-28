@@ -1,1 +1,1 @@
-export const defaultEqual = () => a === b
+export const defaultEqual = (a, b) => a === b;
