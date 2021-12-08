@@ -10,8 +10,12 @@
 // import './interview/asynchronous/async';
 
 // import './interview/generator/generator';
-import './interview/generator/promise';
+// import './interview/generator/promise';
 
 // import './interview/list/index';
 // import './interview/list/compose';
+import './interview/list/functor/MayBe';
+// import './interview/list/functor/Container';
 // import './interview/Object/create';
+
+// import './interview/customPromise';
